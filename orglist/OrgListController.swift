@@ -18,16 +18,26 @@ class OrgListController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        
     }
     
-    let items = ["Label1", "Label2", "Label3", "Label4", "Label5", "Label6", "Label7", "Label8", "Label9", "Label10", "Label11", "Label12", "Label13", "Label14", "Label15", "Label16", "Label17", "Label18", "Label19", "Label20"]
+    let items = ["Pup1", "Pup2", "Pup3", "Pup4", "Pup5", "Pup6", "Pup7", "Pup8", "Pup9", "Pup10", "Pup11", "Pup12", "Pup13", "Pup14", "Pup15", "Pup16", "Pup17", "Pup18", "Pup19", "Pup20"]
+    
+    let pictures = ["pup1.jpeg", "pup2.jpeg", "pup3.jpeg", "pup4.jpg", "pup5.jpg"]
+    
+    
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (items.count)
     }
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-        cell.textLabel?.text = items[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! OrgListTableViewCell
+        
+        let randI = Int(arc4random_uniform(UInt32(pictures.count)))
+        
+        cell.myImage.image = UIImage(named: pictures[randI])
+        cell.myLabel.text = items[indexPath.row]
         
         return (cell)
     }
