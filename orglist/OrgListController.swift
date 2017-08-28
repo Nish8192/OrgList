@@ -8,7 +8,6 @@
 
 import UIKit
 
-var myIndex = 0;
 
 var items = ["Fluffy"]
 
@@ -72,11 +71,18 @@ class OrgListController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndex = indexPath.row
-        showAlert()
+        showAlert(indexPath.row)
+        
+//        let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let editView = Storyboard.instantiateViewController(withIdentifier: "EditPet") as! EditPetViewController
+//        
+//        editView.indexToEdit = indexPath.row
+//        editView.selectedAnimal = pictures[indexPath.row]
+//        editView.name = items[indexPath.row]
+//        self.navigationController?.pushViewController(editView, animated: true)
     }
     
-    func showAlert(){
+    func showAlert(_ myIndex: Int){
         let alert = UIAlertController(title: "I AM", message: items[myIndex], preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Close", style: .default, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)

@@ -25,6 +25,108 @@
             </objects>
             <point key="canvasLocation" x="-582" y="53"/>
         </scene>
+        <!--Edit Pet-->
+        <scene sceneID="lKl-60-W6i">
+            <objects>
+                <viewController storyboardIdentifier="EditPet" title="Edit Pet" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r8d-lM-gtf" customClass="EditPetViewController" customModule="orglist" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uEj-w2-yjZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ayW-MU-5up"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bN8-pd-50r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MIy-0r-XEp">
+                                <rect key="frame" x="34" y="225" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="pup1.jpeg">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="dogSelect:" destination="aGT-H3-9x8" eventType="touchUpInside" id="Sh7-Cu-jtv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qRg-1g-9TD">
+                                <rect key="frame" x="153" y="225" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="cat.jpg">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="catSelect:" destination="aGT-H3-9x8" eventType="touchUpInside" id="tQb-Lc-IwI"/>
+                                    <action selector="catSelect:" destination="r8d-lM-gtf" eventType="touchUpInside" id="uFg-L9-3P6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aUa-XM-b6R">
+                                <rect key="frame" x="281" y="225" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="hamster.jpg">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="hamsterSelect:" destination="r8d-lM-gtf" eventType="touchUpInside" id="DMW-v0-MED"/>
+                                    <action selector="hamsterSelect:" destination="aGT-H3-9x8" eventType="touchUpInside" id="W8i-tc-zvC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NAr-l3-cMv">
+                                <rect key="frame" x="96" y="333" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="cheetah.jpg">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="cheetahSelect:" destination="aGT-H3-9x8" eventType="touchUpInside" id="tcF-HO-lFb"/>
+                                    <action selector="cheetahSelect:" destination="r8d-lM-gtf" eventType="touchUpInside" id="vh9-BW-XmT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ez-sA-prz">
+                                <rect key="frame" x="223" y="333" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="elephant.jpeg">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="elephantSelect:" destination="aGT-H3-9x8" eventType="touchUpInside" id="K09-8U-e3Z"/>
+                                    <action selector="elephantSelect:" destination="r8d-lM-gtf" eventType="touchUpInside" id="jr5-BY-6Li"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New name for pet" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3yl-hT-f2e">
+                                <rect key="frame" x="86" y="94" width="243" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GO-zQ-5iQ">
+                                <rect key="frame" x="170" y="536" width="85" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.16735414709999999" green="0.2369711672" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="SAVE">
+                                    <color key="titleColor" red="0.97940079800000002" green="1" blue="0.99644476280000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveChanges:" destination="r8d-lM-gtf" eventType="touchUpInside" id="JbH-WY-QAx"/>
+                                    <action selector="savePet:" destination="aGT-H3-9x8" eventType="touchUpInside" id="2x9-vk-Em5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="cat" destination="qRg-1g-9TD" id="MHP-EY-oY4"/>
+                        <outlet property="cheetah" destination="NAr-l3-cMv" id="VEY-S1-11N"/>
+                        <outlet property="dog" destination="MIy-0r-XEp" id="qlz-tU-59Y"/>
+                        <outlet property="elephant" destination="2Ez-sA-prz" id="kOg-Pz-c7S"/>
+                        <outlet property="hamster" destination="aUa-XM-b6R" id="FDf-0g-F0e"/>
+                        <outlet property="hamsterSelect" destination="aUa-XM-b6R" id="oUS-QJ-COp"/>
+                        <outlet property="petName" destination="3yl-hT-f2e" id="AGU-n0-Lah"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qcL-aV-NyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-623.1884057971015" y="689.67391304347836"/>
+        </scene>
         <!--Home-->
         <scene sceneID="toL-NB-8Ky">
             <objects>
@@ -100,7 +202,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F7X-dE-x7k">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pet name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F7X-dE-x7k">
                                 <rect key="frame" x="152" y="141" width="163" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>

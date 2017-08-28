@@ -26,6 +26,7 @@
 		F44ADB201F5471540004F6F9 /* cheetah.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F44ADB1C1F5471540004F6F9 /* cheetah.jpg */; };
 		F44ADB211F5471540004F6F9 /* elephant.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F44ADB1D1F5471540004F6F9 /* elephant.jpeg */; };
 		F44ADB221F5471540004F6F9 /* hamster.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F44ADB1E1F5471540004F6F9 /* hamster.jpg */; };
+		F44ADB241F54B9120004F6F9 /* EditPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44ADB231F54B9120004F6F9 /* EditPetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		F44ADB1C1F5471540004F6F9 /* cheetah.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cheetah.jpg; sourceTree = "<group>"; };
 		F44ADB1D1F5471540004F6F9 /* elephant.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = elephant.jpeg; sourceTree = "<group>"; };
 		F44ADB1E1F5471540004F6F9 /* hamster.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hamster.jpg; sourceTree = "<group>"; };
+		F44ADB231F54B9120004F6F9 /* EditPetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				F44ADACD1F5070C10004F6F9 /* Main.storyboard */,
+				F44ADB231F54B9120004F6F9 /* EditPetViewController.swift */,
 				F44ADAC91F5070C10004F6F9 /* AppDelegate.swift */,
 				F44ADACB1F5070C10004F6F9 /* ViewController.swift */,
 				F44ADB191F546ED30004F6F9 /* NewPetViewController.swift */,
@@ -308,6 +311,7 @@
 				F44ADACC1F5070C10004F6F9 /* ViewController.swift in Sources */,
 				F44ADACA1F5070C10004F6F9 /* AppDelegate.swift in Sources */,
 				F44ADB1A1F546ED30004F6F9 /* NewPetViewController.swift in Sources */,
+				F44ADB241F54B9120004F6F9 /* EditPetViewController.swift in Sources */,
 				F44ADB001F509D5A0004F6F9 /* OrgListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
