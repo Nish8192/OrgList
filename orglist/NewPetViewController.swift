@@ -89,9 +89,9 @@ class NewPetViewController: UIViewController {
         
         print (petName.text!)
         print (selectedAnimal)
-        if let name = petName.text{
+        if (petName.text != ""){
             if(selectedAnimal != ""){
-               items.append(name)
+               items.append(petName.text!)
                 pictures.append(selectedAnimal)
 //                orgList.items.append(name)
 //                orgList.pictures.append(selectedAnimal)
