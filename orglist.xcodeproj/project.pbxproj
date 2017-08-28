@@ -21,6 +21,11 @@
 		F44ADB161F50B65F0004F6F9 /* pup3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F44ADB111F50B65F0004F6F9 /* pup3.jpeg */; };
 		F44ADB171F50B65F0004F6F9 /* pup4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F44ADB121F50B65F0004F6F9 /* pup4.jpg */; };
 		F44ADB181F50B65F0004F6F9 /* pup5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F44ADB131F50B65F0004F6F9 /* pup5.jpg */; };
+		F44ADB1A1F546ED30004F6F9 /* NewPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44ADB191F546ED30004F6F9 /* NewPetViewController.swift */; };
+		F44ADB1F1F5471540004F6F9 /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F44ADB1B1F5471540004F6F9 /* cat.jpg */; };
+		F44ADB201F5471540004F6F9 /* cheetah.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F44ADB1C1F5471540004F6F9 /* cheetah.jpg */; };
+		F44ADB211F5471540004F6F9 /* elephant.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F44ADB1D1F5471540004F6F9 /* elephant.jpeg */; };
+		F44ADB221F5471540004F6F9 /* hamster.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F44ADB1E1F5471540004F6F9 /* hamster.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,11 @@
 		F44ADB111F50B65F0004F6F9 /* pup3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pup3.jpeg; sourceTree = "<group>"; };
 		F44ADB121F50B65F0004F6F9 /* pup4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pup4.jpg; sourceTree = "<group>"; };
 		F44ADB131F50B65F0004F6F9 /* pup5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pup5.jpg; sourceTree = "<group>"; };
+		F44ADB191F546ED30004F6F9 /* NewPetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPetViewController.swift; sourceTree = "<group>"; };
+		F44ADB1B1F5471540004F6F9 /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpg; sourceTree = "<group>"; };
+		F44ADB1C1F5471540004F6F9 /* cheetah.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cheetah.jpg; sourceTree = "<group>"; };
+		F44ADB1D1F5471540004F6F9 /* elephant.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = elephant.jpeg; sourceTree = "<group>"; };
+		F44ADB1E1F5471540004F6F9 /* hamster.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hamster.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,13 +121,18 @@
 		F44ADAC81F5070C10004F6F9 /* orglist */ = {
 			isa = PBXGroup;
 			children = (
+				F44ADACD1F5070C10004F6F9 /* Main.storyboard */,
 				F44ADAC91F5070C10004F6F9 /* AppDelegate.swift */,
 				F44ADACB1F5070C10004F6F9 /* ViewController.swift */,
-				F44ADACD1F5070C10004F6F9 /* Main.storyboard */,
+				F44ADB191F546ED30004F6F9 /* NewPetViewController.swift */,
 				F44ADB0D1F50A75B0004F6F9 /* OrgListTableViewCell.swift */,
 				F44ADAFF1F509D5A0004F6F9 /* OrgListController.swift */,
 				F44ADAD01F5070C10004F6F9 /* Assets.xcassets */,
 				F44ADB0F1F50B65F0004F6F9 /* pup1.jpeg */,
+				F44ADB1B1F5471540004F6F9 /* cat.jpg */,
+				F44ADB1C1F5471540004F6F9 /* cheetah.jpg */,
+				F44ADB1D1F5471540004F6F9 /* elephant.jpeg */,
+				F44ADB1E1F5471540004F6F9 /* hamster.jpg */,
 				F44ADB101F50B65F0004F6F9 /* pup2.jpeg */,
 				F44ADB111F50B65F0004F6F9 /* pup3.jpeg */,
 				F44ADB121F50B65F0004F6F9 /* pup4.jpg */,
@@ -255,7 +270,11 @@
 			files = (
 				F44ADB171F50B65F0004F6F9 /* pup4.jpg in Resources */,
 				F44ADB181F50B65F0004F6F9 /* pup5.jpg in Resources */,
+				F44ADB221F5471540004F6F9 /* hamster.jpg in Resources */,
+				F44ADB201F5471540004F6F9 /* cheetah.jpg in Resources */,
 				F44ADAD41F5070C10004F6F9 /* LaunchScreen.storyboard in Resources */,
+				F44ADB1F1F5471540004F6F9 /* cat.jpg in Resources */,
+				F44ADB211F5471540004F6F9 /* elephant.jpeg in Resources */,
 				F44ADB161F50B65F0004F6F9 /* pup3.jpeg in Resources */,
 				F44ADAD11F5070C10004F6F9 /* Assets.xcassets in Resources */,
 				F44ADB151F50B65F0004F6F9 /* pup2.jpeg in Resources */,
@@ -288,6 +307,7 @@
 				F44ADB0E1F50A75B0004F6F9 /* OrgListTableViewCell.swift in Sources */,
 				F44ADACC1F5070C10004F6F9 /* ViewController.swift in Sources */,
 				F44ADACA1F5070C10004F6F9 /* AppDelegate.swift in Sources */,
+				F44ADB1A1F546ED30004F6F9 /* NewPetViewController.swift in Sources */,
 				F44ADB001F509D5A0004F6F9 /* OrgListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

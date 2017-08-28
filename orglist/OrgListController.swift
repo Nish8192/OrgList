@@ -10,10 +10,22 @@ import UIKit
 
 var myIndex = 0;
 
+var items = ["Pup1", "Pup2", "Pup3"]
+
+var pictures = ["pup1.jpeg", "pup2.jpeg", "pup3.jpeg"]
+
 class OrgListController: UITableViewController {
+    
+//    var items = ["Pup1", "Pup2", "Pup3"]
+//    
+//    var pictures = ["pup1.jpeg", "pup2.jpeg", "pup3.jpeg"]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print ("LOADED")
+//        print (items)
+//        print (pictures)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -24,9 +36,7 @@ class OrgListController: UITableViewController {
         
     }
     
-    let items = ["Pup1", "Pup2", "Pup3", "Pup4", "Pup5", "Pup6", "Pup7", "Pup8", "Pup9", "Pup10", "Pup11", "Pup12", "Pup13", "Pup14", "Pup15", "Pup16", "Pup17", "Pup18", "Pup19", "Pup20"]
-    
-    let pictures = ["pup1.jpeg", "pup2.jpeg", "pup3.jpeg", "pup4.jpg", "pup5.jpg"]
+
     
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,9 +46,7 @@ class OrgListController: UITableViewController {
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! OrgListTableViewCell
         
-        let randI = Int(arc4random_uniform(UInt32(pictures.count)))
-        
-        cell.myImage.image = UIImage(named: pictures[randI])
+        cell.myImage.image = UIImage(named: pictures[indexPath.row])
         cell.myLabel.text = items[indexPath.row]
         
         return (cell)
