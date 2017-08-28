@@ -10,9 +10,9 @@ import UIKit
 
 var myIndex = 0;
 
-var items = ["Pup1", "Pup2", "Pup3"]
+var items = ["Fluffy"]
 
-var pictures = ["pup1.jpeg", "pup2.jpeg", "pup3.jpeg"]
+var pictures = ["pup1.jpeg"]
 
 class OrgListController: UITableViewController {
     
@@ -20,12 +20,14 @@ class OrgListController: UITableViewController {
 //    
 //    var pictures = ["pup1.jpeg", "pup2.jpeg", "pup3.jpeg"]
     
+    @IBOutlet var petList: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         print ("LOADED")
-//        print (items)
-//        print (pictures)
+//        petList.reloadData()
+        print (items)
+        print (pictures)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -36,8 +38,18 @@ class OrgListController: UITableViewController {
         
     }
     
-
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            items.remove(at: indexPath.row)
+            pictures.remove(at: indexPath.row)
+            petList.reloadData()
+        }
+    }
     
+
+    override func viewDidAppear(_ animated: Bool) {
+        petList.reloadData()
+    }
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (items.count)

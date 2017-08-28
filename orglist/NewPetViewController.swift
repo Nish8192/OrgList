@@ -45,7 +45,7 @@ class NewPetViewController: UIViewController {
     @IBAction func dogSelect(_ sender: Any) {
         deselectAll()
         dog.layer.borderWidth = 2
-        dog.layer.backgroundColor = UIColor.black.cgColor
+        dog.layer.backgroundColor = UIColor.red.cgColor
         selectedAnimal = "pup1.jpeg"
         
     }
@@ -53,21 +53,21 @@ class NewPetViewController: UIViewController {
     @IBAction func catSelect(_ sender: Any) {
         deselectAll()
         cat.layer.borderWidth = 2
-        cat.layer.borderColor = UIColor.black.cgColor
+        cat.layer.borderColor = UIColor.red.cgColor
         selectedAnimal = "cat.jpg"
     }
     
     @IBAction func hamsterSelect(_ sender: Any) {
         deselectAll()
         hamster.layer.borderWidth = 2
-        hamster.layer.borderColor = UIColor.black.cgColor
+        hamster.layer.borderColor = UIColor.red.cgColor
         selectedAnimal = "hamster.jpg"
     }
     
     @IBAction func cheetahSelect(_ sender: Any) {
         deselectAll()
         cheetah.layer.borderWidth = 2
-        cheetah.layer.borderColor = UIColor.black.cgColor
+        cheetah.layer.borderColor = UIColor.red.cgColor
         selectedAnimal = "cheetah.jpg"
     }
     
@@ -75,7 +75,7 @@ class NewPetViewController: UIViewController {
     @IBAction func elephantSelect(_ sender: Any) {
         deselectAll()
         elephant.layer.borderWidth = 2
-        elephant.layer.borderColor = UIColor.black.cgColor
+        elephant.layer.borderColor = UIColor.red.cgColor
         selectedAnimal = "elephant.jpeg"
     }
     
@@ -83,7 +83,7 @@ class NewPetViewController: UIViewController {
 //        let mainStory = UIStoryboard(name: "Main", bundle: nil)
 //        
 //        let orgList = mainStory.instantiateViewController(withIdentifier: "OrgList") as! OrgListController
-//        
+//
 //        print(orgList.items)
 //        print(orgList.pictures)
         
@@ -91,14 +91,15 @@ class NewPetViewController: UIViewController {
         print (selectedAnimal)
         if (petName.text != ""){
             if(selectedAnimal != ""){
-               items.append(petName.text!)
+                items.append(petName.text!)
                 pictures.append(selectedAnimal)
-//                orgList.items.append(name)
+//                orgList.items.append(petName.text!)
 //                orgList.pictures.append(selectedAnimal)
                 
             }
         }
     }
+    
     
     override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
         if let ident = identifier {
