@@ -15,9 +15,18 @@ import UIKit
 
 class OrgListController: UITableViewController, AddingPetDelegate {
     
-    var items = ["Pup1"]
+    var pets: [Pet] = []
     
-    var pictures = ["pup1.jpeg"]
+    func getPets() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        do {
+        pets = try context.fetch(Pet.fetchRequest())
+        } catch {
+            print ("Getting data failed")
+        }
+    }
+    
     
     @IBOutlet var petList: UITableView!
 
@@ -36,18 +45,21 @@ class OrgListController: UITableViewController, AddingPetDelegate {
     }
     
     func userAddPet(newPetName: String, newPetPicture: String){
-        items.append(newPetName)
-        pictures.append(newPetPicture)
-        print ("IN PROTOCAL")
-        print (items)
-        print(pictures)
-        petList.reloadData()
+//        items.append(newPetName)
+//        pictures.append(newPetPicture)
+//        petList.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete {
-            items.remove(at: indexPath.row)
-            pictures.remove(at: indexPath.row)
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let pet = pets[indexPath.row]
+            context.delete(pet)
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            getPets()
+            petList.reloadData()
+        } else {
+            getPets()
             petList.reloadData()
         }
     }
@@ -60,19 +72,20 @@ class OrgListController: UITableViewController, AddingPetDelegate {
     }
     
 
-    override func viewDidAppear(_ animated: Bool) {
-        
+    override func viewWillAppear(_ animated: Bool) {
+        getPets()
+        petList.reloadData()
     }
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (items.count)
+        return (pets.count)
     }
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! OrgListTableViewCell
         
-        cell.myImage.image = UIImage(named: pictures[indexPath.row])
-        cell.myLabel.text = items[indexPath.row]
+        cell.myImage.image = UIImage(named: pets[indexPath.row].picture!)
+        cell.myLabel.text = pets[indexPath.row].name
         
         return (cell)
     }
@@ -97,11 +110,11 @@ class OrgListController: UITableViewController, AddingPetDelegate {
     }
     
     func showAlert(_ myIndex: Int){
-        let alert = UIAlertController(title: "I AM", message: items[myIndex], preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Close", style: .default, handler: { (action) in
-            alert.dismiss(animated: true, completion: nil)
-        }))
-        self.present(alert, animated: true, completion: nil)
+//        let alert = UIAlertController(title: "I AM", message: items[myIndex], preferredStyle: .alert)
+//        alert.addAction(UIAlertAction(title: "Close", style: .default, handler: { (action) in
+//            alert.dismiss(animated: true, completion: nil)
+//        }))
+//        self.present(alert, animated: true, completion: nil)
     }
 
 }

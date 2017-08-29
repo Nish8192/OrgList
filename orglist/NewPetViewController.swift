@@ -86,12 +86,26 @@ class NewPetViewController: UIViewController {
     }
     
     @IBAction func savePet(_ sender: Any) {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let newPet = Pet(context: context)
+        
         if petListDelegate != nil {
             if petName.text != "" {
                 if selectedAnimal != "" {
-                    let newPetName = petName.text!
-                    petListDelegate?.userAddPet(newPetName: newPetName, newPetPicture: selectedAnimal)
-                    self.navigationController?.popViewController(animated: true)
+//                    let newPetName = petName.text!
+//                    petListDelegate?.userAddPet(newPetName: newPetName, newPetPicture: selectedAnimal)
+//                    self.navigationController?.popViewController(animated: true)
+                    newPet.name = petName.text!
+                    newPet.picture = selectedAnimal
+                    
+                    // Save data to Core Data
+                    
+                    (UIApplication.shared.delegate as! AppDelegate).saveContext()
+                    
+                    self.navigationController!.popViewController(animated: true)
+                    
                 } else {
                     showNoPicAlert()
                 }
