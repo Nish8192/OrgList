@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F41B347F1F55B38C0007EA9E /* orglist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F41B347D1F55B38C0007EA9E /* orglist.xcdatamodeld */; };
 		F44ADACA1F5070C10004F6F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44ADAC91F5070C10004F6F9 /* AppDelegate.swift */; };
 		F44ADACC1F5070C10004F6F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44ADACB1F5070C10004F6F9 /* ViewController.swift */; };
 		F44ADACF1F5070C10004F6F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44ADACD1F5070C10004F6F9 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F41B347E1F55B38C0007EA9E /* orglist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = orglist.xcdatamodel; sourceTree = "<group>"; };
 		F44ADAC61F5070C10004F6F9 /* orglist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = orglist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44ADAC91F5070C10004F6F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F44ADACB1F5070C10004F6F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				F44ADACD1F5070C10004F6F9 /* Main.storyboard */,
 				F44ADB231F54B9120004F6F9 /* EditPetViewController.swift */,
 				F44ADAC91F5070C10004F6F9 /* AppDelegate.swift */,
+				F41B347D1F55B38C0007EA9E /* orglist.xcdatamodeld */,
 				F44ADACB1F5070C10004F6F9 /* ViewController.swift */,
 				F44ADB191F546ED30004F6F9 /* NewPetViewController.swift */,
 				F44ADB0D1F50A75B0004F6F9 /* OrgListTableViewCell.swift */,
@@ -310,6 +313,7 @@
 				F44ADB0E1F50A75B0004F6F9 /* OrgListTableViewCell.swift in Sources */,
 				F44ADACC1F5070C10004F6F9 /* ViewController.swift in Sources */,
 				F44ADACA1F5070C10004F6F9 /* AppDelegate.swift in Sources */,
+				F41B347F1F55B38C0007EA9E /* orglist.xcdatamodeld in Sources */,
 				F44ADB1A1F546ED30004F6F9 /* NewPetViewController.swift in Sources */,
 				F44ADB241F54B9120004F6F9 /* EditPetViewController.swift in Sources */,
 				F44ADB001F509D5A0004F6F9 /* OrgListController.swift in Sources */,
@@ -559,6 +563,7 @@
 				F44ADAF01F5070C10004F6F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F44ADAF11F5070C10004F6F9 /* Build configuration list for PBXNativeTarget "orglistTests" */ = {
 			isa = XCConfigurationList;
@@ -567,6 +572,7 @@
 				F44ADAF31F5070C10004F6F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F44ADAF41F5070C10004F6F9 /* Build configuration list for PBXNativeTarget "orglistUITests" */ = {
 			isa = XCConfigurationList;
@@ -575,8 +581,22 @@
 				F44ADAF61F5070C10004F6F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F41B347D1F55B38C0007EA9E /* orglist.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F41B347E1F55B38C0007EA9E /* orglist.xcdatamodel */,
+			);
+			currentVersion = F41B347E1F55B38C0007EA9E /* orglist.xcdatamodel */;
+			path = orglist.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F44ADABE1F5070C10004F6F9 /* Project object */;
 }
