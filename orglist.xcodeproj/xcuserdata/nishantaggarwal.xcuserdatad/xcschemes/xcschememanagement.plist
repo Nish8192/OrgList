@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pet List.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>orglist.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>F41B34831F55D27D0007EA9E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>F44ADAC51F5070C10004F6F9</key>
 		<dict>
 			<key>primary</key>

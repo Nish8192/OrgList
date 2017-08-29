@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		F41B347F1F55B38C0007EA9E /* orglist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F41B347D1F55B38C0007EA9E /* orglist.xcdatamodeld */; };
+		F41B34871F55D27D0007EA9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41B34861F55D27D0007EA9E /* AppDelegate.swift */; };
+		F41B34891F55D27D0007EA9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41B34881F55D27D0007EA9E /* ViewController.swift */; };
+		F41B348C1F55D27D0007EA9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F41B348A1F55D27D0007EA9E /* Main.storyboard */; };
+		F41B348F1F55D27D0007EA9E /* Pet_List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F41B348D1F55D27D0007EA9E /* Pet_List.xcdatamodeld */; };
+		F41B34911F55D27D0007EA9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F41B34901F55D27D0007EA9E /* Assets.xcassets */; };
+		F41B34941F55D27D0007EA9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F41B34921F55D27D0007EA9E /* LaunchScreen.storyboard */; };
 		F44ADACA1F5070C10004F6F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44ADAC91F5070C10004F6F9 /* AppDelegate.swift */; };
 		F44ADACC1F5070C10004F6F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44ADACB1F5070C10004F6F9 /* ViewController.swift */; };
 		F44ADACF1F5070C10004F6F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44ADACD1F5070C10004F6F9 /* Main.storyboard */; };
@@ -49,6 +55,14 @@
 
 /* Begin PBXFileReference section */
 		F41B347E1F55B38C0007EA9E /* orglist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = orglist.xcdatamodel; sourceTree = "<group>"; };
+		F41B34841F55D27D0007EA9E /* Pet List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pet List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F41B34861F55D27D0007EA9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F41B34881F55D27D0007EA9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F41B348B1F55D27D0007EA9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F41B348E1F55D27D0007EA9E /* Pet_List.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pet_List.xcdatamodel; sourceTree = "<group>"; };
+		F41B34901F55D27D0007EA9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F41B34931F55D27D0007EA9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F41B34951F55D27D0007EA9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F44ADAC61F5070C10004F6F9 /* orglist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = orglist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44ADAC91F5070C10004F6F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F44ADACB1F5070C10004F6F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +92,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F41B34811F55D27D0007EA9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F44ADAC31F5070C10004F6F9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -102,12 +123,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F41B34851F55D27D0007EA9E /* Pet List */ = {
+			isa = PBXGroup;
+			children = (
+				F41B34861F55D27D0007EA9E /* AppDelegate.swift */,
+				F41B34881F55D27D0007EA9E /* ViewController.swift */,
+				F41B348A1F55D27D0007EA9E /* Main.storyboard */,
+				F41B34901F55D27D0007EA9E /* Assets.xcassets */,
+				F41B34921F55D27D0007EA9E /* LaunchScreen.storyboard */,
+				F41B34951F55D27D0007EA9E /* Info.plist */,
+				F41B348D1F55D27D0007EA9E /* Pet_List.xcdatamodeld */,
+			);
+			path = "Pet List";
+			sourceTree = "<group>";
+		};
 		F44ADABD1F5070C10004F6F9 = {
 			isa = PBXGroup;
 			children = (
 				F44ADAC81F5070C10004F6F9 /* orglist */,
 				F44ADADD1F5070C10004F6F9 /* orglistTests */,
 				F44ADAE81F5070C10004F6F9 /* orglistUITests */,
+				F41B34851F55D27D0007EA9E /* Pet List */,
 				F44ADAC71F5070C10004F6F9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -118,6 +154,7 @@
 				F44ADAC61F5070C10004F6F9 /* orglist.app */,
 				F44ADADA1F5070C10004F6F9 /* orglistTests.xctest */,
 				F44ADAE51F5070C10004F6F9 /* orglistUITests.xctest */,
+				F41B34841F55D27D0007EA9E /* Pet List.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,6 +207,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F41B34831F55D27D0007EA9E /* Pet List */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F41B34961F55D27D0007EA9E /* Build configuration list for PBXNativeTarget "Pet List" */;
+			buildPhases = (
+				F41B34801F55D27D0007EA9E /* Sources */,
+				F41B34811F55D27D0007EA9E /* Frameworks */,
+				F41B34821F55D27D0007EA9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pet List";
+			productName = "Pet List";
+			productReference = F41B34841F55D27D0007EA9E /* Pet List.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F44ADAC51F5070C10004F6F9 /* orglist */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F44ADAEE1F5070C10004F6F9 /* Build configuration list for PBXNativeTarget "orglist" */;
@@ -233,6 +287,10 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Nishant Aggarwal";
 				TargetAttributes = {
+					F41B34831F55D27D0007EA9E = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
 					F44ADAC51F5070C10004F6F9 = {
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
@@ -265,11 +323,22 @@
 				F44ADAC51F5070C10004F6F9 /* orglist */,
 				F44ADAD91F5070C10004F6F9 /* orglistTests */,
 				F44ADAE41F5070C10004F6F9 /* orglistUITests */,
+				F41B34831F55D27D0007EA9E /* Pet List */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F41B34821F55D27D0007EA9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F41B34941F55D27D0007EA9E /* LaunchScreen.storyboard in Resources */,
+				F41B34911F55D27D0007EA9E /* Assets.xcassets in Resources */,
+				F41B348C1F55D27D0007EA9E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F44ADAC41F5070C10004F6F9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -306,6 +375,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F41B34801F55D27D0007EA9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F41B34891F55D27D0007EA9E /* ViewController.swift in Sources */,
+				F41B348F1F55D27D0007EA9E /* Pet_List.xcdatamodeld in Sources */,
+				F41B34871F55D27D0007EA9E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F44ADAC21F5070C10004F6F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -352,6 +431,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		F41B348A1F55D27D0007EA9E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F41B348B1F55D27D0007EA9E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F41B34921F55D27D0007EA9E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F41B34931F55D27D0007EA9E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		F44ADACD1F5070C10004F6F9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -371,6 +466,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F41B34971F55D27D0007EA9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Pet List/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "nish8192.Pet-List";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F41B34981F55D27D0007EA9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Pet List/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "nish8192.Pet-List";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		F44ADAEC1F5070C10004F6F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -547,6 +666,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F41B34961F55D27D0007EA9E /* Build configuration list for PBXNativeTarget "Pet List" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F41B34971F55D27D0007EA9E /* Debug */,
+				F41B34981F55D27D0007EA9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F44ADAC11F5070C10004F6F9 /* Build configuration list for PBXProject "orglist" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -593,6 +720,16 @@
 			);
 			currentVersion = F41B347E1F55B38C0007EA9E /* orglist.xcdatamodel */;
 			path = orglist.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		F41B348D1F55D27D0007EA9E /* Pet_List.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F41B348E1F55D27D0007EA9E /* Pet_List.xcdatamodel */,
+			);
+			currentVersion = F41B348E1F55D27D0007EA9E /* Pet_List.xcdatamodel */;
+			path = Pet_List.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

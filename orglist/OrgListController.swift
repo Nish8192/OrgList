@@ -13,7 +13,7 @@ import UIKit
 //
 //var pictures = ["pup1.jpeg"]
 
-class OrgListController: UITableViewController, AddingPetDelegate {
+class OrgListController: UITableViewController {
     
     var pets: [Pet] = []
     
@@ -44,12 +44,6 @@ class OrgListController: UITableViewController, AddingPetDelegate {
         
     }
     
-    func userAddPet(newPetName: String, newPetPicture: String){
-//        items.append(newPetName)
-//        pictures.append(newPetPicture)
-//        petList.reloadData()
-    }
-    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete {
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -65,10 +59,7 @@ class OrgListController: UITableViewController, AddingPetDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toNewPet" {
-            let NewPet: NewPetViewController = segue.destination as! NewPetViewController
-            NewPet.petListDelegate = self
-        }
+        
     }
     
 
@@ -100,13 +91,11 @@ class OrgListController: UITableViewController, AddingPetDelegate {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         showAlert(indexPath.row)
         
-//        let Storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let editView = Storyboard.instantiateViewController(withIdentifier: "EditPet") as! EditPetViewController
-//        
-//        editView.indexToEdit = indexPath.row
-//        editView.selectedAnimal = pictures[indexPath.row]
-//        editView.name = items[indexPath.row]
-//        self.navigationController?.pushViewController(editView, animated: true)
+        let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let editView = Storyboard.instantiateViewController(withIdentifier: "EditPet") as! EditPetViewController
+//
+        editView.indexToEdit = indexPath.row
+        self.navigationController?.pushViewController(editView, animated: true)
     }
     
     func showAlert(_ myIndex: Int){
