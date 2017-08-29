@@ -9,24 +9,22 @@
 import UIKit
 
 
-var items = ["Fluffy"]
+//var items = ["Fluffy"]
+//
+//var pictures = ["pup1.jpeg"]
 
-var pictures = ["pup1.jpeg"]
-
-class OrgListController: UITableViewController {
+class OrgListController: UITableViewController, AddingPetDelegate {
     
-//    var items = ["Pup1", "Pup2", "Pup3"]
-//    
-//    var pictures = ["pup1.jpeg", "pup2.jpeg", "pup3.jpeg"]
+    var items = ["Pup1"]
+    
+    var pictures = ["pup1.jpeg"]
     
     @IBOutlet var petList: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print ("LOADED")
-//        petList.reloadData()
-        print (items)
-        print (pictures)
+
+     
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -37,6 +35,15 @@ class OrgListController: UITableViewController {
         
     }
     
+    func userAddPet(newPetName: String, newPetPicture: String){
+        items.append(newPetName)
+        pictures.append(newPetPicture)
+        print ("IN PROTOCAL")
+        print (items)
+        print(pictures)
+        petList.reloadData()
+    }
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete {
             items.remove(at: indexPath.row)
@@ -45,9 +52,16 @@ class OrgListController: UITableViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toNewPet" {
+            let NewPet: NewPetViewController = segue.destination as! NewPetViewController
+            NewPet.petListDelegate = self
+        }
+    }
+    
 
     override func viewDidAppear(_ animated: Bool) {
-        petList.reloadData()
+        
     }
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

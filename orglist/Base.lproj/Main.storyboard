@@ -185,7 +185,6 @@
         <!--Add New Pet-->
         <scene sceneID="1r6-Z8-8kJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0J3-RP-yOF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Add New Pet" id="aGT-H3-9x8" customClass="NewPetViewController" customModule="orglist" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="URc-CC-aMg"/>
@@ -275,7 +274,6 @@
                                 </state>
                                 <connections>
                                     <action selector="savePet:" destination="aGT-H3-9x8" eventType="touchUpInside" id="5qu-Pr-PEc"/>
-                                    <segue destination="tVS-dq-AgY" kind="show" identifier="savePet" id="oUC-Gy-8dt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -290,6 +288,7 @@
                         <outlet property="petName" destination="F7X-dE-x7k" id="L1n-5t-F7N"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0J3-RP-yOF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1101" y="69"/>
         </scene>
@@ -301,7 +300,4 @@
         <image name="hamster.jpg" width="800" height="530"/>
         <image name="pup1.jpeg" width="275" height="183"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="oUC-Gy-8dt"/>
-    </inferredMetricsTieBreakers>
 </document>

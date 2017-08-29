@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol AddingPetDelegate {
+    func userAddPet(newPetName: String, newPetPicture: String)
+}
+
 class NewPetViewController: UIViewController {
+    
+    var petListDelegate: AddingPetDelegate? = nil
     
     func showNoPicAlert(){
         let alert = UIAlertController(title: "ERROR", message: "Please select a picture!", preferredStyle: .alert)
@@ -80,42 +86,37 @@ class NewPetViewController: UIViewController {
     }
     
     @IBAction func savePet(_ sender: Any) {
-//        let mainStory = UIStoryboard(name: "Main", bundle: nil)
-//        
-//        let orgList = mainStory.instantiateViewController(withIdentifier: "OrgList") as! OrgListController
-//
-//        print(orgList.items)
-//        print(orgList.pictures)
-        
-        print (petName.text!)
-        print (selectedAnimal)
-        if (petName.text != ""){
-            if(selectedAnimal != ""){
-                items.append(petName.text!)
-                pictures.append(selectedAnimal)
-//                orgList.items.append(petName.text!)
-//                orgList.pictures.append(selectedAnimal)
-                
-            }
-        }
-    }
-    
-    
-    override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
-        if let ident = identifier {
-            if ident == "savePet" {
-                if(petName.text == ""){
-                    showNoNameAlert()
-                    return false;
-                }
-                if(selectedAnimal == ""){
+        if petListDelegate != nil {
+            if petName.text != "" {
+                if selectedAnimal != "" {
+                    let newPetName = petName.text!
+                    petListDelegate?.userAddPet(newPetName: newPetName, newPetPicture: selectedAnimal)
+                    self.navigationController?.popViewController(animated: true)
+                } else {
                     showNoPicAlert()
-                    return false;
                 }
+            } else {
+                showNoNameAlert()
             }
         }
-        return true
     }
+    
+    
+//    override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
+//        if let ident = identifier {
+//            if ident == "savePet" {
+//                if(petName.text == ""){
+//                    showNoNameAlert()
+//                    return false;
+//                }
+//                if(selectedAnimal == ""){
+//                    showNoPicAlert()
+//                    return false;
+//                }
+//            }
+//        }
+//        return true
+//    }
     
     
     
